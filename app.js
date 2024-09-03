@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const offreshema = require('./routes/offres');
 const routeragence = require('./routes/agence');
+const routeclient = require('./routes/client');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 const app = express();
@@ -17,5 +18,6 @@ app.use(cors());
 
 app.use('/offres', offreshema);
 app.use('/auth', routeragence);
+app.use('/client', routeclient);
 
 module.exports = app;
