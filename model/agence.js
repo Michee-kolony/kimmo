@@ -7,6 +7,7 @@ const agenceshema = mongoose.Schema({
      password : {type:String, required:true},
      adresse:{type:String},
      rccm: {type:String},
+     createdate:{type:Date, default: Date.now()}
 })
 
 agenceshema.plugin(uniquevalidator);
