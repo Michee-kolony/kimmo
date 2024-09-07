@@ -12,3 +12,13 @@ exports.ajouterFavori = (req, res, next)=>{
             res.status(400).json({error})
         });
 }
+
+exports.getfavoris = (req, res, next) => {
+    Favoris.find()
+       .then(data => {
+            res.status(200).json(data)
+        })
+       .catch(error => {
+            res.status(400).json({error})
+        });
+}
