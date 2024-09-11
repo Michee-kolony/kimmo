@@ -8,6 +8,7 @@ exports.registerClient = (req, res, next)=>{
        const client = new Client({
            nom : req.body.nom,
            email : req.body.email,
+           pays: req.body.pays,
            password:hash
        })
        client.save()

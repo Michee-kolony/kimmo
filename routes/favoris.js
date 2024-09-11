@@ -6,4 +6,4 @@ router.post('/', ajouterFavori);
 router.get('/', getfavoris);
 router.get('/:id', getone);
 router.delete('/:id', deletefavoris);
-module.exports = router 
+module.exports = router
