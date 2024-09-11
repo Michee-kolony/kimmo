@@ -40,6 +40,7 @@ exports.loginClient = (req, res, next)=>{
                                     ),
                                     nom:user.nom,
                                     email:user.email,
+                                    pays:user.pays,
                                     createdate:user.createdate
                                 
                                 });
