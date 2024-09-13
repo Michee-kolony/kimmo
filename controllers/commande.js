@@ -22,7 +22,7 @@ exports.getone = (req, res, next)=>{
 }
 
 exports.deleteone = (req, res, next)=>{
-    Commande.deteleOne({_id:req.params.id})
-            .then(()=> res.status(204).json({message:"Commande supprimé"}))
-            .catch(err => res.status(400).json({err}));
+    Commande.deleteOne({_id:req.params.id})
+            .then(()=>res.status(204).json({message:"Commande supprimé"}))
+            .catch(err =>res.status(400).json({err}));
 }
