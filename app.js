@@ -4,6 +4,7 @@ const offreshema = require('./routes/offres');
 const routeragence = require('./routes/agence');
 const routeclient = require('./routes/client');
 const routefavoris = require('./routes/favoris');
+const commanderouter = require('./routes/commande');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 const app = express();
@@ -21,5 +22,6 @@ app.use('/offres', offreshema);
 app.use('/auth', routeragence);
 app.use('/client', routeclient);
 app.use('/favoris', routefavoris);
+app.use('/commande',commanderouter);
 
 module.exports = app;
